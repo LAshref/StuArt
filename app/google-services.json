@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "917799833991",
+    "project_id": "stu-art-9ecc8",
+    "storage_bucket": "stu-art-9ecc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917799833991:android:4201425b2b1bb7282e4322",
+        "android_client_info": {
+          "package_name": "com.example.stuart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSRI86_njzSJ0cB41cUADMOHKI9urn9qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
