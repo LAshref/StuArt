@@ -14,8 +14,10 @@ import com.example.stuart.R
 import com.example.stuart.activities.ShoppingActivity
 import com.example.stuart.databinding.FragmentLoginBinding
 import com.example.stuart.databinding.FragmentRegisterBinding
+import com.example.stuart.dialog.setupBottomSheetDialog
 import com.example.stuart.util.Resource
 import com.example.stuart.viewmodel.LoginViewModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 
@@ -42,6 +44,26 @@ class LoginFragment :Fragment(R.layout.fragment_login) {
                 val email = edEmailLogin.text.toString().trim()
                 val password = edPasswordLogin.text.toString()
                 viewModel.login(email, password)
+            }
+        }
+        binding.tvForgotPasswordLogin.setOnClickListener {
+            setupBottomSheetDialog {email ->
+                viewModel.resetPassword(email)
+            }
+        }
+        lifecycleScope.launchWhenStarted {
+            viewModel.resetPassword.collect{
+                when(it){
+                    is Resource.Loading -> {
+                    }
+                    is Resource.Success -> {
+                        Snackbar.make(requireView(), "Reset Link was sent to your email",Snackbar.LENGTH_LONG).show()
+                    }
+                    is Resource.Error -> {
+                        Snackbar.make(requireView(), "Error: ${it.message}",Snackbar.LENGTH_LONG).show()
+                    }
+                    else -> Unit
+                }
             }
         }
         lifecycleScope.launchWhenStarted {
