@@ -36,6 +36,7 @@
             android:drawablePadding="6dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintTop_toTopOf="parent"
             android:text="Stu'Art."
             />
@@ -50,6 +51,7 @@
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@id/tvAppName"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             />
         <TextView
             android:id="@+id/tvDontHaveAccount"
@@ -57,11 +59,12 @@
             android:layout_height="wrap_content"
             style="@style/h2"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintTop_toBottomOf="@+id/tvLetsLogin"
             android:textAlignment="center"
             android:gravity="center"
             android:text="Don't have an account? Register Now"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             />
         <EditText
             android:id="@+id/edEmailLogin"
@@ -73,7 +76,7 @@
             style="@style/editText"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             />
         <EditText
             android:id="@+id/edPasswordLogin"
@@ -85,7 +88,7 @@
             style="@style/editText"
             android:hint="Password"
             android:inputType="textPassword"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             />
         <TextView
             android:id="@+id/tvForgotPasswordLogin"
@@ -100,7 +103,7 @@
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
@@ -109,7 +112,8 @@
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             android:text="Login"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
+            app:spinning_bar_color="@color/white"
             />
         <ImageView
         android:id="@+id/facebookLogin"
