@@ -7,9 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class HomeViewPageAdapter(
     private val fragments: List<Fragment>,
     fm: FragmentManager,
-    lifecycle: androidx.lifecycle.Lifecycle
-
-    ) :FragmentStateAdapter(fm,lifecycle){
+    lifecycle: androidx.lifecycle.Lifecycle) :FragmentStateAdapter(fm,lifecycle){
 
 
     override fun getItemCount(): Int {
