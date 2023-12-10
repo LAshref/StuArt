@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".activities.ShoppingActivity">
 
+
+
+    <fragment
+        android:id="@+id/shoppingHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/shopping_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_navigation_background"
+        app:elevation="0dp"
+        app:itemIconTint="@drawable/bottom_nav_item_background"
+        app:itemPaddingBottom="10dp"
+        app:itemPaddingTop="10dp"
+        app:itemRippleColor="@color/g_white"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/snackBar_coordinator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--
+        NavHostFragment:
+    The NavHostFragment is a container for hosting the navigation graph defined in the navigation resource file. It acts as a placeholder for the destination fragments defined in the navigation graph and manages the fragment transactions based on the navigation actions.
+    In the layout file, the NavHostFragment is defined using the <fragment> tag with the following attributes:
+    android:id="@+id/host_fragment": This assigns the ID "host_fragment" to the NavHostFragment, which can be used to reference it in the activity's code.
+    android:name="androidx.navigation.fragment.NavHostFragment": This specifies the class of the fragment to be used as the NavHostFragment.
+    app:defaultNavHost="true": This attribute designates the NavHostFragment as the default navigation host for the activity, allowing it to handle navigation events and back button presses.
+    Additionally, the NavHostFragment is associated with a specific navigation graph using the attribute:
+    app:navGraph="@navigation/shopping_graph": This attribute specifies the navigation graph resource file ("shopping_graph") that defines the navigation structure for the ShoppingActivity.
+    The NavHostFragment serves as the central hub for navigating between different destinations within the ShoppingActivity, providing a seamless and consistent user experience for navigating through the app's features.
+
+        BottomNavigationView:
+    The BottomNavigationView is a standard Android component used for navigating between primary destinations in an app. It typically provides a menu of items, often ... displayed at the bottom of the screen, to allow users to easily switch between different parts of the app.
+    In the layout file, the BottomNavigationView is defined using the <com.google.android.material.bottomnavigation.BottomNavigationView> tag with the following attributes:
+    android:id="@+id/bottom_navigation": This assigns the ID "bottom_navigation" to the BottomNavigationView, which can be used to reference it in the activity's code.
+    ... app:menu="@menu/bottom_navigation_menu": This attribute specifies the menu resource file ("bottom_navigation_menu") that defines the items to be displayed in the BottomNavigationView.
+    Additionally, the BottomNavigationView is customized with various attributes to control its appearance and behavior, such as:
+    android:layout_width="match_parent" and android:layout_height="70dp": These attributes define the width and height of the BottomNavigationView.
+    ... app:itemIconTint="@drawable/bottom_nav_item_background": This attribute specifies the tint color for the item icons in the BottomNavigationView.
+    The BottomNavigationView provides a convenient and intuitive way for users to navigate between different sections or features of the app, and it's a common ... UI pattern in many Android applications.
+
+        CoordinatorLayout:
+    The CoordinatorLayout is a powerful layout that provides a coordinator for child views. It's often used in conjunction with the AppBarLayout, CollapsingToolbarLayout, and other components to create rich, interactive ... user interfaces.
+    In the layout file, the CoordinatorLayout is defined using the <androidx.coordinatorlayout.widget.CoordinatorLayout> tag with the following attributes:
+    android:id="@+id/snackBar_coordinator": This assigns the ID "snackBar_coordinator" to the CoordinatorLayout, which can be used to reference it in the activity's code.
+    ... android:layout_width="0dp" and android:layout_height="wrap_content": These attributes define the width and height of the CoordinatorLayout.
+    Additionally, the CoordinatorLayout is positioned within the ConstraintLayout using constraints:
+    app:layout_constraintBottom_toTopOf="@id/bottom_navigation": This attribute positions the bottom edge of the CoordinatorLayout above the top edge of the BottomNavigationView.
+    ... app:layout_constraintStart_toStartOf="parent" and app:layout_constraintEnd_toEndOf="parent": These attributes position the CoordinatorLayout at the start and end edges of its parent, ensuring it spans the entire width of the screen.
+    The CoordinatorLayout provides a flexible and powerful foundation for coordinating the interactions and animations of its child views, and it's often used to create ... engaging and dynamic user interfaces in Android apps.
+
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>

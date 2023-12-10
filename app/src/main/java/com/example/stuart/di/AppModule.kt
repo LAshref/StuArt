@@ -1,5 +1,8 @@
 package com.example.stuart.di
 
+import android.app.Application
+import android.content.Context
+import com.example.stuart.util.Constants.INTRODUCTION_SP
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.firestore
@@ -20,4 +23,12 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirebaseFirestoreDatabase() = Firebase.firestore
+
+    @Provides
+    fun provideIntroductionSP( application : Application) = application.getSharedPreferences(INTRODUCTION_SP,
+        Context.MODE_PRIVATE
+    )
+    /* INTRODUCTION_SP is declared in the constants File
+    MODE_PRIVATE : indicate that only our app can read from this function of  shared Preferences
+     */
 }

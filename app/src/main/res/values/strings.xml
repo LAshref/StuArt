@@ -2,4 +2,10 @@
     <string name="app_name">Stu\'Art</string>
     <string name="rightAddress">Welcome to Stu\'Art \nThe best way to\nsupport students</string>
     <string name="quality">It is now very easy to reach\nthe best quality among of \nproducts made by students</string>
+    <string name="see_product">See product</string>
+    <string name="see_the_product">See The Product</string>
+    <string name="_35_dt">35 DT</string>
+    <string name="_60_dt">60 DT</string>
+    <string name="colorfull_eye">Colorfull Eye</string>
+    <string name="necklace">Necklace</string>
 </resources>
