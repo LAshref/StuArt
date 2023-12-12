@@ -37,7 +37,8 @@ In summary, childFragmentManager is used to manage the child fragments within th
 # BUILD.Gradle file Explanation : 
 
 
-###Plugins Section:
+###Plugins Section
+
 This section is used to apply various plugins to the project. These plugins extend the build system's capabilities and enable integration with different libraries and tools. In your build.gradle file, you are applying plugins for Android application, Kotlin, parcelize, Android Navigation Safe Args, Kotlin annotation processing, Dagger Hilt for Android, and Google Services.
 
   *com.android.application*:
@@ -63,10 +64,12 @@ This plugin is used for integrating Google services, such as Firebase, into your
 
 
 
-###Android Section:
+###Android Section
+
 This section contains configurations related to the Android-specific build. It includes the namespace, compile SDK version, default configuration such as application ID, minimum and target SDK versions, version code and name, and the test instrumentation runner. Additionally, it defines build types, compile options, Kotlin options, and build features like view binding.
 
-###Dependencies Section:
+###Dependencies Section
+
 Here, you declare the dependencies required for your project. These dependencies include libraries and tools that your project depends on. For example, you have dependencies on AndroidX libraries, Google Material Design, Firebase Firestore, JUnit for testing, Espresso for UI testing, Dagger Hilt, Android Navigation component, Glide for image loading, and various other libraries for UI components and Firebase services.
 
 
