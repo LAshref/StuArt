@@ -54,6 +54,12 @@ This section contains configurations related to the Android-specific build. It i
 Here, you declare the dependencies required for your project. These dependencies include libraries and tools that your project depends on. For example, you have dependencies on AndroidX libraries, Google Material Design, Firebase Firestore, JUnit for testing, Espresso for UI testing, Dagger Hilt, Android Navigation component, Glide for image loading, and various other libraries for UI components and Firebase services.
 
 
+## Coroutines 
+are a language feature in Kotlin that allow you to write asynchronous code in a more sequential and synchronous style. They provide a way to perform long-running tasks, such as network requests or database operations, **without blocking the main thread**. This allows for more responsive and efficientand non-blocking manner.
+
+Coroutines are based on the concept of suspending functions, which can be paused and resumed at a later time. This allows you to write asynchronous code that looks and behaves like synchronous code, making it easier to understand and maintain.
+
+
   **androidx.core:core-ktx:1.12.0**
 This library provides Kotlin extensions for the Android framework. It allows you to write more concise and idiomatic Kotlin code when working with Android APIs.
 
