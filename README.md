@@ -1,3 +1,19 @@
+# Design Pattern !
+
+   ### Activities:
+  Activities in Android represent the UI and interaction with the user. In the MVVM pattern, **activities** act as the "View" layer. They are responsible for **observing changes in the ViewModel** and **updating the UI accordingly**. For example, your LoginActivity and ShoppingActivity would be part of the "View" layer.
+  
+  ### Fragments:
+  Fragments are **reusable UI components** that represent **a portion of a user interface**. In the MVVM pattern, fragments are also part of the "View" layer. They **observe changes in the ViewModel** and **update their UI** accordingly. For example, you might have fragments for different sections of your app, **each with its own ViewModel**.
+  
+  ### ViewModels:
+  ViewModels are **responsible for managing the UI-related data and logic**. They serve as an **intermediary** between the "View" (activities and fragments) and the "Model" (data). ViewModels **expose data to the UI** and **handle user interactions*. For example, you might have a LoginViewModel and a ShoppingViewModel to manage the data and behavior of the corresponding activities or fragments.
+  
+  ### Layout Files:
+  The layout files in the res/layout folder define the UI for your activities and fragments using XML. These layout files represent the visual aspect of the "View" layer and are inflated by the activities and fragments to display the UI to the user.
+  
+  In the MVVM pattern, the "Model" layer typically includes data sources, repositories, and data models. The "ViewModel" interacts with the "Model" to fetch and manipulate data, and the "View" (activities and fragments) observes changes in the ViewModel and updates the UI accordingly.
+
 
 # BUILD.Gradle file Explanation : 
 
@@ -88,6 +104,15 @@ This library provides Kotlin extensions for the Android Jetpack Navigation compo
 
 **com.google.firebase:firebase-auth:22.3.0**
 This library provides Firebase Authentication, allowing you to authenticate users in your app using Firebase services.
+
+
+
+
+
+
+
+
+
 
 
 ## HomeFragment.kt
