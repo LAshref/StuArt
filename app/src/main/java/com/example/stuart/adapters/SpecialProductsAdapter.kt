@@ -43,12 +43,9 @@ class SpecialProductsAdapter: RecyclerView.Adapter<SpecialProductsAdapter.Specia
     }
 
     override fun onBindViewHolder(holder: SpecialProductsViewHolder, position: Int) {
-        if (differ.currentList.isNotEmpty()) {
             val product = differ.currentList[position]
             holder.bind(product)
-        }
     }
-
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
