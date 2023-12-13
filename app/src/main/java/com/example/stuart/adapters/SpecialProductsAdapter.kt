@@ -14,9 +14,7 @@ class SpecialProductsAdapter: RecyclerView.Adapter<SpecialProductsAdapter.Specia
         RecyclerView.ViewHolder(binding.root){
         fun bind(product: Product){
             binding.apply{
-                if (product.images.isNotEmpty()) {
                     Glide.with(itemView).load(product.images[0]).into(imageSpecialRvItem)
-                }
                 tvSpecialProductName.text = product.name
                 tvSpecialProductPrice.text = product.price.toString()
             }
@@ -45,8 +43,10 @@ class SpecialProductsAdapter: RecyclerView.Adapter<SpecialProductsAdapter.Specia
     }
 
     override fun onBindViewHolder(holder: SpecialProductsViewHolder, position: Int) {
-        val product = differ.currentList[position]
-        holder.bind(product)
+        if (differ.currentList.isNotEmpty()) {
+            val product = differ.currentList[position]
+            holder.bind(product)
+        }
     }
 
     override fun getItemCount(): Int {
