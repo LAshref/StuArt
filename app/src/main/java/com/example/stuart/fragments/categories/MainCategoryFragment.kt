@@ -47,8 +47,8 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
                         showLoading()
                     }
                     is Resource.Success ->{
-                        hideLoading()
                         specialProductsAdapter.differ.submitList(it.data)
+                        hideLoading()
 
                     }
                     is Resource.Error ->{
