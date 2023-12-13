@@ -5,12 +5,13 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.stuart.R
+import com.example.stuart.databinding.ActivityShoppingBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
     val binding by lazy {
-        com.example.stuart.databinding.ActivityShoppingBinding.inflate(layoutInflater)
+        ActivityShoppingBinding.inflate(layoutInflater)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

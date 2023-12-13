@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 
 private val TAG = "MainCategoryFragment"
 @AndroidEntryPoint
-class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
+class   MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
     private lateinit var binding: FragmentMainCategoryBinding
     private lateinit var specialProductsAdapter: SpecialProductsAdapter
     private val viewModel by viewModels<MainCategoryViewModel>()
@@ -40,7 +40,7 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
         super.onViewCreated(view, savedInstanceState)
 
         setupSpecialProductsRv()
-        lifecycleScope.launch {
+        lifecycleScope.launchWhenStarted {
             viewModel.specialProducts.collectLatest{
                 when (it){
                     is Resource.Loading ->{
