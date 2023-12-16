@@ -75,7 +75,7 @@ class   MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
                         showLoading()
                     }
                     is Resource.Success ->{
-                        bestProductsAdapter.differ.submitList(it.data)
+                        bestDealsAdapter.differ.submitList(it.data)
                         hideLoading()
 
                     }
@@ -138,7 +138,7 @@ class   MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
 
     private fun setupSpecialProductsRv(){
         specialProductsAdapter = SpecialProductsAdapter()
-        binding.rvBestProducts.apply {
+        binding.rvSpecialProducts.apply {
             layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
             adapter = specialProductsAdapter
 

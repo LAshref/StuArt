@@ -19,7 +19,6 @@
             android:layout_height="90dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/lace"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
              />
