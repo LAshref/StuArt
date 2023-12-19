@@ -77,8 +77,7 @@ class MainCategoryViewModel @Inject constructor(
             viewModelScope.launch {
                 _bestProducts.emit(Resource.Loading())
             }
-            firestore.collection("Products").whereEqualTo("category","chair").orderBy("id",
-                Query.Direction.ASCENDING).limit(pagingInfo.bestproductpage * 10).get()
+            firestore.collection("Products").whereEqualTo("category","chair").limit(pagingInfo.bestproductpage * 10).get()
                 .addOnSuccessListener { result ->
                     val bestProducts = result.toObjects(Product::class.java)
                     pagingInfo.isPagingEnd = bestProducts == pagingInfo.oldBestProducts
