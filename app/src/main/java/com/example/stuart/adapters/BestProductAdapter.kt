@@ -12,7 +12,7 @@ import com.example.stuart.data.Product
 import com.example.stuart.databinding.BestDealsRvItemBinding
 import com.example.stuart.databinding.ProductRvItemBinding
 
-class BestProductAdapter: RecyclerView.Adapter<BestProductAdapter.BestProductsViewHolder>() {
+class BestProductsAdapter: RecyclerView.Adapter<BestProductsAdapter.BestProductsViewHolder>() {
 
     inner class BestProductsViewHolder(private val binding: ProductRvItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(product: Product){
