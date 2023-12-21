@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.stuart.data.Product
-import com.example.stuart.databinding.BestDealsRvItemBinding
 import com.example.stuart.databinding.ProductRvItemBinding
 
 class BestProductsAdapter: RecyclerView.Adapter<BestProductsAdapter.BestProductsViewHolder>() {
@@ -57,9 +56,14 @@ class BestProductsAdapter: RecyclerView.Adapter<BestProductsAdapter.BestProducts
     override fun onBindViewHolder(holder: BestProductsViewHolder, position: Int) {
         val product = differ.currentList[position]
         holder.bind(product)
+        holder.itemView.setOnClickListener{
+            onClick?.invoke(product)
+        }
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
+
+    var onClick:((Product) -> Unit)? = null
 }

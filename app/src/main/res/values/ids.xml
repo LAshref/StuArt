@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rvColors" type="id" />
+    <item name="rvSize" type="id" />
+    <item name="imageColor" type="id" />
+    <item name="imageShadow" type="id" />
+</resources>

@@ -10,9 +10,10 @@ import com.example.stuart.viewmodel.CategoryViewModel
 import com.example.stuart.viewmodel.Factory.BaseCategoryViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import javax.inject.Inject
-
+@AndroidEntryPoint
 class HandMade: BaseCategoryFragment() {
 
     @Inject
