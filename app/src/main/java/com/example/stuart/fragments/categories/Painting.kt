@@ -1,4 +1,4 @@
 package com.example.stuart.fragments.categories
 
-class Painting: baseCategoryFragment() {
+class Painting: BaseCategoryFragment() {
 }
