@@ -103,7 +103,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:background="@drawable/total_box_background"
+            android:background="@layout/total_box_background"
             app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
             app:layout_constraintStart_toStartOf="@id/leftGuideLine"
             app:layout_constraintTop_toBottomOf="@id/bottomGuideLine">
@@ -132,7 +132,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sf_pro_display"
-                android:text="$150"
+                android:text="150 TND"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -142,19 +142,19 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonCheckout"
-            style="@style/blueButtonStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:layout_marginTop="45dp"
+            style="@style/blueButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/totalBoxContainer"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
             android:layout_marginBottom="20dp"
             android:text="Check out"
-            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
-            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
-            app:layout_constraintTop_toBottomOf="@id/totalBoxContainer"
-            app:spinning_bar_color="@color/white" />
+            android:layout_marginTop="45dp"
+            app:spinning_bar_color="@color/white"
+            />
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -203,6 +203,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>
+
