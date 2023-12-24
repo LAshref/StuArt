@@ -64,7 +64,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     //loading button
-    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
+    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0-SNAP2")
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.13.0")
