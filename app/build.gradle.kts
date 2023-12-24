@@ -50,6 +50,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
     implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("br.com.simplepass:loading-button-android:2.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -64,8 +65,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     //loading button
-    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
-
+    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0-SNAP2")
+    //loading button
+    implementation("br.com.simplepass:loading-button-android:2.2.0")
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.13.0")
     //circular image
@@ -78,4 +80,6 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
     //Firebase
     implementation("com.google.firebase:firebase-auth:22.3.0")
+    //Coroutines with firebase
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
 }
