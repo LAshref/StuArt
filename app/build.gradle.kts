@@ -50,6 +50,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
     implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("br.com.simplepass:loading-button-android:2.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -78,4 +79,6 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
     //Firebase
     implementation("com.google.firebase:firebase-auth:22.3.0")
+    //Coroutines with firebase
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
 }
