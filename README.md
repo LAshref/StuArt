@@ -25,3 +25,4 @@ Stu'Art is an innovative app designed to cater to individuals in search of premi
 To get started with Stu'Art, follow these steps:
 
 1. [Clone the repository] to your local machine.
+2. Run and Enjoy
