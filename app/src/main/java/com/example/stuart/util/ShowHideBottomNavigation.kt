@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
     fun Fragment.showBottomNavigationView(){
         val bottomNavigationView = (activity as ShoppingActivity).findViewById<BottomNavigationView>(
             R.id.bottomNavigation)
-        bottomNavigationView.visibility = View.GONE
+        bottomNavigationView.visibility = View.VISIBLE
 
 }
 

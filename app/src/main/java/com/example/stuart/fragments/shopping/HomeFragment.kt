@@ -40,6 +40,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             MusicTalents()
         )
 
+        binding.viewpagerHome.isUserInputEnabled = false
+
         val viewPager2Adapter =
             HomeViewPageAdapter(categoriesFragments, childFragmentManager, lifecycle)
         binding.viewpagerHome.adapter = viewPager2Adapter
@@ -52,14 +54,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 3 -> tab.text = "NeedleWork"
                 4 -> tab.text = "MusicTalents"
             }
-
         }.attach()
-
-
-        }
-
-    
-
+    }
 }
 
 /*

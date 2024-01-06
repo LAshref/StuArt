@@ -65,7 +65,6 @@ class CategoryViewModel constructor(
 
             }.addOnFailureListener {
                 viewModelScope.launch {
-
                     _bestProducts.emit(Resource.Error(it.message.toString()))
                 }
             }

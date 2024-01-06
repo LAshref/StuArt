@@ -60,7 +60,7 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     //Navigation component
-    val nav_version = "2.5.2"
+    val nav_version = "2.7.6"
     implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
@@ -76,7 +76,6 @@ dependencies {
     //stepView
     implementation ("com.github.shuhart:stepview:1.5.1")
     //Android Ktx
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
     //Firebase
     implementation("com.google.firebase:firebase-auth:22.3.0")
     //Coroutines with firebase
