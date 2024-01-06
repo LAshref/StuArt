@@ -1,7 +1,7 @@
 # Stu'Art 
 <p align="center">
-  <img src="![_9df98667-b825-4c14-afcf-f4257f53ca1f](https://github.com/LAshref/StuArt/assets/125886214/882b12ff-4634-498e-ab3b-88fea8954a92)" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+  <img src="https://github.com/LAshref/StuArt/assets/125886214/e6420ab0-2a74-46d0-a9f4-6c9cdad714c1"
+    width="500" height="500" title="logo">
 </p>
 
 Stu'Art is an innovative app designed to cater to individuals in search of premium furniture products to enhance the aesthetic appeal and functionality of their homes. The app focuses on providing a curated selection of high-quality items such as cupboards, chairs, and other home furnishings, ensuring that users have access to an array of stylish and durable options to suit their preferences.
