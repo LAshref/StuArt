@@ -46,7 +46,7 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.10.0")
+    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
     implementation("com.google.firebase:firebase-storage:20.3.0")
@@ -60,9 +60,9 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     //Navigation component
-    val nav_version = "2.5.2"
-    implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    val navVersion = "2.5.2"
+    implementation ("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
     //loading button
     implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0-SNAP2")
@@ -76,7 +76,7 @@ dependencies {
     //stepView
     implementation ("com.github.shuhart:stepview:1.5.1")
     //Android Ktx
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.6")
     //Firebase
     implementation("com.google.firebase:firebase-auth:22.3.0")
     //Coroutines with firebase
