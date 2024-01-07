@@ -63,21 +63,21 @@ class ProductDetailsFragment: Fragment() {
         colorsAdapter.onItemClick={
             selectedColor=it
         }
-        binding.buttonAddtoCart.setOnClickListener {
+        binding.buttonAddToCart.setOnClickListener {
             viewModel.addUpdateProductInCart(CartProduct(product,1, selectedColor, selectedSize))
         }
         lifecycleScope.launchWhenStarted{
             viewModel.addToCart.collectLatest {
                 when (it){
                     is Resource.Loading ->{
-                        binding.buttonAddtoCart.startAnimation()
+                        binding.buttonAddToCart.startAnimation()
                     }
                     is Resource.Success ->{
-                        binding.buttonAddtoCart.revertAnimation()
+                        binding.buttonAddToCart.revertAnimation()
                         Toast.makeText(requireContext(),"Your product was successfully added!", Toast.LENGTH_SHORT).show()
                     }
                     is Resource.Error ->{
-                        binding.buttonAddtoCart.stopAnimation()
+                        binding.buttonAddToCart.stopAnimation()
                         Toast.makeText(requireContext(),it.message, Toast.LENGTH_SHORT).show()
                     }
                     else -> Unit
@@ -86,7 +86,7 @@ class ProductDetailsFragment: Fragment() {
         }
         binding.apply{
             tvProductName.text=product.name
-            tvProductMPrice.text="${product.price}DT"
+            tvProductPrice.text="${product.price}DT"
             tvProductDescription.text = product.description
             if (product.colors.isNullOrEmpty())
                 tvProductColors.visibility = View.INVISIBLE
